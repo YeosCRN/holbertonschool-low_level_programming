@@ -2,7 +2,7 @@
 
 /**
  * main - command to print a sentence
- * return: program must end with the value 0
+ * Return: program must end with the value 0
  */
 int main(void)
 {

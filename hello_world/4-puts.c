@@ -1,4 +1,5 @@
 #include<stdio.h>
+	
 	/**
 	 * main - command to print a sentence
 	 * return: program must end with the value 0	

@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- *main - program will be able to determite if random generated number is positive, negative or zero
+ * main - program to designate number nature
  */
 int main(void)
 {

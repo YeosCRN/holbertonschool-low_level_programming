@@ -4,6 +4,7 @@
 
 /**
  * main - program to designate number nature
+ * Return: value must return to 0
  */
 int main(void)
 {

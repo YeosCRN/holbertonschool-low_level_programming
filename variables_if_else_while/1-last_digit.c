@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - program to designate nature of the last digit of the number
+ * main - designate nature of the last digit of the number
  * Return: value must return to 0
  */
 int main(void)
@@ -21,4 +21,4 @@ int main(void)
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastdigit);
 	scanf("%d", &n);
 	return (0);
-}	
+}

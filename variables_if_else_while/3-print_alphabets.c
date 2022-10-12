@@ -2,7 +2,7 @@
 
 /**
  * main - print alphabets
- * Return: value must return to 0
+ *  Return: value must return to 0
  */
 int main(void)
 {

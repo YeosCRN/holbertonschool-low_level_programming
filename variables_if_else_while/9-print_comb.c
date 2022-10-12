@@ -1,20 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - print base16
+ * main - print numbers with space
  * Return: value must return to 0
  */
 int main(void)
 {
-	int x, y;
+	int x;
 
-	for (x = 48; x <= 57; x++)
+	for (x = '1'; x <= '9'; x++)
 	{
 	putchar(x);
-	}
-	for (y = 'a'; y <= 'f'; y++)
-	{
-	putchar(y);
+	putchar(',');
+	putchar(' ');
 	}
 	putchar('\n');
 	return (0);

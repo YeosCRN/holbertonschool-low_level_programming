@@ -1,11 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - prints _putchar
- * Return: value must end in 0
  */
 int main(void)
 {
-	printf("_putchar\n");
-	return (0);
+	_putchart('_')
+	_putchart('p')
+	_putchart('u')
+	_putchart('t')
+	_putchart('c')
+	_putchart('h')
+	_putchart('a')
+	_putchart('r')
+	_putchart('t')
 }

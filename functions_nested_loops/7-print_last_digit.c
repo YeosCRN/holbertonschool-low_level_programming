@@ -5,14 +5,16 @@
  * @x: - to find
  * Return: y
  */
-int print_last_digit(int x)
+int print_last_digit(int n)
 {
-	int y = x % 10;
+	int y;
 
-	if (x < 0)
+	y = n % 10;
+
+	if (n < 0)
 		y = (-1) * y;
 
-	_putchar(y);
+	_putchar(y + '0');
 
 	return (y);
 }

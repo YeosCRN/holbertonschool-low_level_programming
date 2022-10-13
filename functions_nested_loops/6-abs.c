@@ -2,7 +2,8 @@
 
 /**
  * _abs - find absolute
- * @x - to be displayed
+ * @x: - to be displayed
+ * Return: negative numbers go positive
  */
 int _abs(int x)
 {

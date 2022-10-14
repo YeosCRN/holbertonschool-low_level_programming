@@ -2,7 +2,7 @@
 
 /**
  * more_numbers - 0 to 14
-*/
+ */
 void more_numbers(void)
 {
 	char c, d;
@@ -18,8 +18,8 @@ void more_numbers(void)
 				_putchar((d / 10) + '0');
 			}
 			_putchar((d % 10) + '0');
-		}	
+		}
 		_putchar('\n');
 		c++;
-	}	
+	}
 }

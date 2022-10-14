@@ -8,6 +8,11 @@ void print_diagonal(int n)
 {
 	char x, y;
 
+	if(n <= 0)
+	{
+		_putchar(10);
+	}
+
 	while (y <= n)
 	{
 		if (y > 0)
@@ -17,10 +22,6 @@ void print_diagonal(int n)
 				_putchar(' ');
 			}
 			_putchar(92);
-			_putchar(10);
-		}
-		else
-		{
 			_putchar(10);
 		}
 		y++;

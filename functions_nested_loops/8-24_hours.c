@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * print_last_digit - print last digit
- * @n: - to find
- * Return: y
+ * jack_bauer - print hours
  */
 void jack_bauer(void)
 {
@@ -13,10 +11,10 @@ void jack_bauer(void)
 	{
 		for (y = 0; y <= 59; y++)
 		{
-			_putchar((x/10) + '0');
+			_putchar((x / 10) + '0');
 			_putchar((x % 10) + '0');
 			_putchar(':');
-			_putchar((y/10) + '0');
+			_putchar((y / 10) + '0');
 			_putchar((y % 10) + '0');
 			_putchar(10);
 		}

@@ -1,7 +1,5 @@
 CC = gcc                    # The compiler to be used
 
-SRC = .c
-
 OBJ = main.o school.o
 
 NAME = school

@@ -1,6 +1,6 @@
 CC = gcc                    # The compiler to be used
 
-SRC = 
+SRC = .c
 
 OBJ = main.o school.o
 

@@ -12,7 +12,7 @@ void times_table(void)
 		for (y = 0; y <= 9; y++)
 		{
 			z = x * y;
-			if (z >= 10)
+			if (z >= 10 && y != 0)
 			{
 				_putchar((z / 10) + '0');
 				_putchar((z % 10) + '0');
@@ -26,6 +26,10 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
+			}
+			if (y == 0 && y == 1)
+			{
+				_putchar((z % 10) + '0');
 			}
 		}
 		_putchar(10);

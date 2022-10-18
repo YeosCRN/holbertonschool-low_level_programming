@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * puts_half - code
@@ -15,9 +13,9 @@ void puts_half(char *str)
 	for (x = (length) / 2; x < length; x++)
 	{
 		if (x == (length - 1) / 2)
-			printf(("%c" - 1), str[x]);
+			_putchar(str[x] - "1");
 		else
-			printf("%c", str[x]);
+			_putchar(str[x]);
 	}
-	printf("\n");
+	_putchar(10);
 }

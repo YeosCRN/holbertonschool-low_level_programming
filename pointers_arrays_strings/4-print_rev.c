@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * print_rev - code
@@ -11,6 +9,6 @@ void print_rev(char *s)
 	int x;
 
 	for (x = (strlen(s) - 1); x >= 0; x--)
-		printf("%c", s[x]);
-	printf("\n");
+		_putchar(s[x]);
+	_putchar(10);
 }

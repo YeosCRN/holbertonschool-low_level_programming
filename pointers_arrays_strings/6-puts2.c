@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * puts2 - code
@@ -16,8 +14,8 @@ void puts2(char *str)
 	{
 		if (x % 2 == 0)
 		{
-			printf("%c", str[x]);
+			_putchar(str[x] - "1");
 		}
 	}
-	printf("\n");
+	_putchar(10);
 }

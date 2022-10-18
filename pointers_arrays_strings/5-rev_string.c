@@ -9,7 +9,7 @@
 void rev_string(char *s)
 {
 	int length, x;
-	char *begin, *end, temp;
+	char *begin, *end, temporal;
 
 	length = strlen(s);
 	begin = s;
@@ -20,9 +20,9 @@ void rev_string(char *s)
 
 	for (x = 0; x < length / 2; x++)
 	{
-		temp = *end;
+		temporal = *end;
 		*end = *begin;
-		*begin = temp;
+		*begin = temporal;
 
 		begin++;
 		end--;

@@ -9,6 +9,6 @@ void print_rev(char *s)
 	int x;
 
 	for (x = (strlen(s) - 1); x >= 0; x--)
-		_putchar(s[x]);
+		_putchar(s[x + 0]);
 	_putchar(10);
 }

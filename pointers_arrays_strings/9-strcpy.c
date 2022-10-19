@@ -3,6 +3,7 @@
  * _strcpy - code
  * @dest: pointer
  * @src: pointer
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -11,8 +12,12 @@ char *_strcpy(char *dest, char *src)
 
 	n = strlen(src);
 	for (i = 0; i < n; i++)
-		 dest[i] = src[i];
+	{
+		dest[i] = src[i];
+	}
 	if (i == n)
-		 dest[i] = '\0';
+	{
+		dest[i] = '\0';
+	}
 	return (dest);
 }

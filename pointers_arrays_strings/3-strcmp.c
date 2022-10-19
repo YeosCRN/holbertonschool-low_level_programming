@@ -9,7 +9,7 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int x, y, z;
+	int x, y;
 
 	y = strlen(s1);
 	x = 0;
@@ -23,8 +23,6 @@ int _strcmp(char *s1, char *s2)
 		x++;
 		if (x == '\0')
 			break;
-			return (0);
-			
-		
 	}
+	return (0);
 }

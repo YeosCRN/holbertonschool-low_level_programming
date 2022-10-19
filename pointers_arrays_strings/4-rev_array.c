@@ -18,7 +18,7 @@ void reverse_array(int *a, int n)
     for (n = 0; n < length + x; n++)
         end++;
 
-    for (n = 0; n < length / x; n++)
+    for (n = 0; n < length / 2; n++)
     {
         temporal = *end;
         *end = *begin;

@@ -4,6 +4,7 @@
  * _strcat - code
  * @dest: pointer
  * @src: pointer
+ * Return: dest
  */
 char *_strcat(char *dest, char *src)
 
@@ -14,7 +15,7 @@ char *_strcat(char *dest, char *src)
 	z = strlen(src);
 	for (x = y; x < (y + z); x++)
 	{
-		dest[x] = src [x - y];
+		dest[x] = src[x - y];
 	}
 	return (dest);
 }

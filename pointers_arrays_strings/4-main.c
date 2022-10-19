@@ -1,12 +1,12 @@
-#include "main.h"
 #include <stdio.h>
 
+void reverse_array(int *, int);
+
 /**
- * print_array - print an array of integers
- * @a: an array of integers
- * @n: the number of elements to swap
+ * print_array - Print an array of int
  *
- * Return: nothing.
+ * @a: an array of integers
+ * @n: the number of elements in @a
  */
 void print_array(int *a, int n)
 {
@@ -16,9 +16,7 @@ void print_array(int *a, int n)
 	while (i < n)
 	{
 		if (i != 0)
-		{
 			printf(", ");
-		}
 		printf("%d", a[i]);
 		i++;
 	}
@@ -26,16 +24,18 @@ void print_array(int *a, int n)
 }
 
 /**
- * main - check the code
+ * main - check the code for Holberton School students.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
+	int a[] = {
+		234234, 64534, 77632, 8723451, 98987, 1345231, 98534597,
+		23456789, 6235456, 41235416, 374578, 10435434, 89734567};
 
 	print_array(a, sizeof(a) / sizeof(int));
-	reverse_array(a, sizeof(a) / sizeof(int));
+	reverse_array(a, 0);
 	print_array(a, sizeof(a) / sizeof(int));
 	return (0);
 }

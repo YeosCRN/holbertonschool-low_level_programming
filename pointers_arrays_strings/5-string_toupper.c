@@ -12,7 +12,6 @@ char *string_toupper(char *scr)
 	x = strlen(scr);
 	for (y = 0; y < x; y++)
 	{
-
 		if (scr[y] >= 'a' && scr[y] <= 'z')
 		{
 			scr[y] = scr[y] - 32;

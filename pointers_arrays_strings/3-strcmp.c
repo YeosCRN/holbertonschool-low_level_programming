@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- * _strncpy - code
- * @dest: pointer
- * @src: pointer
- * @n: var
- * Return: dest
+ * _strcmp - code
+ * @s1: pointer
+ * @s2: pointer
+ * Return: 0
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -18,7 +17,6 @@ int _strcmp(char *s1, char *s2)
 		if (s1[x] != s2[x])
 		{
 			return (s1[x] - s2[x]);
-			break;
 		}
 		x++;
 	}

@@ -7,16 +7,16 @@
  */
 char *string_toupper(char *scr)
 {
-    int x, y;
+	int x, y;
 
-    x = strlen(scr);
-    for (y = 0; y < x; y++)
-    {
+	x = strlen(scr);
+	for (y = 0; y < x; y++)
+	{
 
-        if (scr[y] >= 'a' && scr[y] <= 'z')
-        {
-            scr[y] = scr[y] - 32;
-        }
-    }
-    return (scr);
+		if (scr[y] >= 'a' && scr[y] <= 'z')
+		{
+			scr[y] = scr[y] - 32;
+		}
+	}
+	return (scr);
 }

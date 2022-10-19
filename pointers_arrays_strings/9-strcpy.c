@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strcpy - code
  * @dest: pointer
@@ -12,9 +11,8 @@ char *_strcpy(char *dest, char *src)
 
 	n = strlen(src);
 	for (i = 0; i < n; i++)
-		dest[i] = src[i];
-	for (; i < n; i++)
-		dest[i] = '\0';
-
+		 dest[i] = src[i];
+	if (i == n)
+		 dest[i] = '\0';
 	return (dest);
 }

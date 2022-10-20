@@ -14,7 +14,7 @@ char *cap_string(char *scr)
 	x = 0;
 	while (x < y)
 	{
-		if (scr[x] == 0)
+		if (x == 0)
 		{
 			scr[x] -= 32;
 		}

@@ -5,7 +5,7 @@
  * @scr: pointer
  * Return: scr
  */
-char *leet(char scr *)
+char *leet(char *scr)
 {
 	int x, y, z;
 	char a[] = {65, 97, 69, 101, 79, 111, 84, 116, 76, 108};

@@ -23,7 +23,7 @@ char *cap_string(char *scr)
 			if (scr[x + 1] >= 'a' && scr[x + 1] <= 'z')
 				scr[x + 1] -= 32;
 		}
-		for (z = 0; z < 12; z++)
+		for (z = 0; z < 13; z++)
 		{
 			if (scr[x] == p[z])
 			{

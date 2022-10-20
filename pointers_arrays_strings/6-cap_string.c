@@ -16,7 +16,7 @@ char *cap_string(char *scr)
 	{
 		if (scr[x] == 0)
 		{
-			scr[x + 1] -= 32;
+			scr[x] -= 32;
 		}
 		if (scr[x] == p[z])
 		{

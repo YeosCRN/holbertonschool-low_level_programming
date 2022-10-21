@@ -20,9 +20,9 @@ char *_strpbrk(char *s, char *accept)
         }
         x++;
     }
-    if (accept == '\0')
+    if (accept[x] == '\0')
     {
-        return (s + x - 1);
+        return (NULL);
     }
     return (NULL);
 }

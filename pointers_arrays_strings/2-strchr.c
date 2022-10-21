@@ -14,9 +14,13 @@ char *_strchr(char *s, char c)
 	x = 0;
 	while (x < y)
 	{
-		if (s[x] == c || s[x] == '\0')
+		if (s[x] == c)
 		{
 			return(s + x);
+		}
+		if (s[x] == '\0')
+		{
+			return (s + x);
 		}
 		x++;
 	}

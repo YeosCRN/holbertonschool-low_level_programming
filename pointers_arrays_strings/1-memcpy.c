@@ -9,20 +9,18 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	{
-		unsigned int x, y;
+	unsigned int x, y;
 
-		y = strlen(dest);
-		x = 0;
-		while (x < n)
+	y = strlen(dest);
+	x = 0;
+	while (x < n)
+	{
+		dest[y + x] = src[x];
+		if (src[x] == '\0')
 		{
-			dest[y + x] = src[x];
-			if (src[x] == '\0')
-			{
-				break;
-			}
-			x++;
+			break;
 		}
-		return (dest);
+		x++;
 	}
+	return (dest);
 }

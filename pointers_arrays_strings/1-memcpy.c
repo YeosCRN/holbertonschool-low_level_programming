@@ -16,10 +16,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	while (x < n)
 	{
 		dest[y + x] = src[x];
-		if (src[x] == '\0')
-		{
-			break;
-		}
 		x++;
 	}
 	return (dest);

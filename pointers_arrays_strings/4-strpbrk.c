@@ -8,10 +8,9 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int x, y, z, stop;
+	int x, y;
 
 	x = 0;
-	z = 0;
 	while (s[x] != '\0')
 	{
 		y = 0;

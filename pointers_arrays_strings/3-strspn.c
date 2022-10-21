@@ -8,8 +8,14 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-    int y;
+	int x, y, z;
+	x = 0;
+	y = 0;
+	while (s[x] != '\0')
+		x++;
+	while (accept[y] != '\0')
+		y++;
+	z = y + x;
 
-    y = strlen(accept);
-    return (y + 1);
+	return (z - x + 1);
 }

@@ -20,10 +20,6 @@ char *_strstr(char *haystack, char *needle)
 			{
 				return (haystack + x);
 			}
-			else if (needle[y + 1] == '\0')
-			{
-				return (NULL);
-			}
 			y++;
 		}
 		x++;
@@ -31,6 +27,10 @@ char *_strstr(char *haystack, char *needle)
 	if (needle[y] == '\0')
 	{
 		return (haystack);
+	}
+	else if (needle[y + 1] == '\0')
+	{
+		return (NULL);
 	}
 
 	return (NULL);

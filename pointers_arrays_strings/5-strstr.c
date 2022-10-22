@@ -29,15 +29,16 @@ char *_strstr(char *haystack, char *needle)
 			}
 			y++;
 		}
-		if (haystack[x + 1] == '\0')
-		{
-			return (NULL);
-		}
-		if (needle[y] == '\0')
-		{
-			return (haystack);
-		}
 		x++;
 	}
+	if (needle[y] == '\0' && haystack[x + 1] != '\0')
+	{
+		return (haystack);
+	}
+	if (haystack[x + 1] == '\0')
+	{
+		return (NULL);
+	}
+
 	return (0);
 }

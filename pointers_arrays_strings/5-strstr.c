@@ -33,10 +33,10 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (needle[y] == '\0' && haystack[x + 1] != '\0')
 	{
-		return (haystack);
+		return (NULL);
 	}
 	else
-		return (NULL);
+		return (haystack);
 
 	return (0);
 }

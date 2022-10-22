@@ -35,7 +35,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		return (haystack);
 	}
-	else if (haystack[x + 1] == '\0')
+	if (haystack[x + 1] == '\0')
 	{
 		return (NULL);
 	}

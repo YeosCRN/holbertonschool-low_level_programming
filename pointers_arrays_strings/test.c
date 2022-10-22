@@ -1,37 +1,37 @@
 #include "main.h"
 
 /**
- * leet - code
- * @scr: pointer
- * Return: scr
+ * _strstr - code
+ * @haystack: pointer
+ * @needle: pointer
+ * Return: haystack after finding str
  */
-char *leet(char *scr)
+char *_strstr(char *haystack, char *needle)
 {
-	int x, y, z;
-	char a[] = {65, 97, 69, 101, 79, 111, 84, 116, 76, 108};
-	char b[] = {52, 51, 48, 55, 49};
+	int x, y;
 
-	y = strlen(scr);
 	x = 0;
-	while (x < y)
+	while (haystack[x] != '\0')
 	{
-		for (z = 0; z <= 9; z++)
+		y = 0;
+		while (needle[y] != '\0')
 		{
-			if (scr[x] == a[z])
+			if (haystack[x] == needle[y] && haystack[x + 1] == needle[y + 1] && haystack[x + 2] == needle[y + 2])
 			{
-				a[0] = b[0];
-				a[1] = b[0];
-				a[2] = b[1];
-				a[3] = b[1];
-				a[4] = b[2];
-				a[5] = b[2];
-				a[6] = b[3];
-				a[7] = b[3];
-				a[8] = b[4];
-				a[9] = b[4];
+				return (haystack + x);
 			}
+			y++;
 		}
 		x++;
 	}
-	return (scr);
+	if (needle[y] == '\0')
+	{
+		return (haystack);
+	}
+	else if (needle[y + 1] == '\0')
+	{
+		return (NULL);
+	}
+
+	return (NULL);
 }

@@ -28,11 +28,11 @@ char *str_concat(char *s1, char *s2)
 		c[x] = s1[x];
 
 	for (total = 0; s2[total] != '\0'; total++)
-		{
+	{
 		c[total + y] = s2[total];
 		if (s2 == NULL)
 			return (NULL);
-		}
+	}
 
 	return (c);
 }

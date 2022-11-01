@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * str_concat - function
- * @s1: str
- * @s2: str
+ * alloc_grid - function
+ * @width: str
+ * @height: str
  * Return: pointer, NULL for fail
  */
 int **alloc_grid(int width, int height)
 {
-	int x, y, z;
+	int x;
 	int **a;
 
 	if (width < 0 || height < 0)

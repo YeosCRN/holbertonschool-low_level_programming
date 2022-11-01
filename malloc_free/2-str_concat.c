@@ -10,6 +10,9 @@ char *str_concat(char *s1, char *s2)
 	int x, y, z, total;
 	char *c;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+
 	for (y = 0; s1[y] != '\0'; y++)
 	{
 	}
@@ -17,6 +20,9 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	c = malloc(sizeof(char) * (y + z + 1));
+
+	if (c == NULL)
+		return (NULL);
 
 	for (x = 0; s1[x] != '\0'; x++)
 		c[x] = s1[x];

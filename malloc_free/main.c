@@ -10,6 +10,18 @@
  *
  * Return: Nothing.
  */
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * print_grid - prints a grid of integers
+ * @grid: the address of the two dimensional grid
+ * @width: width of the grid
+ * @height: height of the grid
+ *
+ * Return: Nothing.
+ */
 void print_grid(int **grid, int width, int height)
 {
 	int w;
@@ -48,5 +60,6 @@ int main(void)
 	grid[0][3] = 98;
 	grid[3][4] = 402;
 	print_grid(grid, 6, 4);
+	free_grid(grid, 4);
 	return (0);
 }

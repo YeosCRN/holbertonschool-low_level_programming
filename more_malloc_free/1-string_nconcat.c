@@ -36,9 +36,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		c[total + y] = s2[total];
 		total++;
 	}
-	while (s2[n] == '\0')
+	while (c[n] == '\0')
 	{
-		free(c[n]);
+		free(c);
 		n--;
 	}
 		return (c);

@@ -3,6 +3,7 @@
  * str_concat - function
  * @s1: str
  * @s2: str
+ * @n: var
  * Return: pointer, NULL for fail
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)

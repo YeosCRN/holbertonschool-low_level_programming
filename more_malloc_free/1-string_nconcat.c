@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * str_concat - function
+ * string_nconcat - function
  * @s1: str
  * @s2: str
  * @n: var

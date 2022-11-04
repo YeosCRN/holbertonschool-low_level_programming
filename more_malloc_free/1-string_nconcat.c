@@ -8,7 +8,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int x = 0, y = 0, z = 0, total = 0;
+	unsigned int x = 0, y = 0, z = 0, total = 0, rep = 0;
 	char *c;
 
 	if (s1 == NULL)
@@ -30,10 +30,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (x = 0; s1[x] != '\0'; x++)
 		c[x] = s1[x];
 
-	while (total < n && s2[total] != 0)
+	while (total < n && s2[rep] != 0)
 	{
-		c[total + y] = s2[total];
+		c[total + y] = s2[rep];
 		total++;
+		rep++;
 	}
 	c[total] = '\0';
 

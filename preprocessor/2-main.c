@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - prints source code file name
+ * Return: 0
 */
 
 int main(void)

@@ -1,13 +1,12 @@
-#include "3-calc.h"
+#include "function_pointers.h"
 
 /**
- * main - main
- * @argc: var
- * @argv: arr
- * Return: result
+ * print_name - code
+ * @name: pointer
+ * @f: pointer
  */
 void print_name(char *name, void (*f)(char *))
 {
-    if (f)
-        f(name);
+	if (f)
+		f(name);
 }

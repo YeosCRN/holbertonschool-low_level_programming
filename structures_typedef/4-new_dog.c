@@ -8,15 +8,20 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *firulais;
 
-	if (new_dog = (struct dog_t *)malloc(sizeof(dog_t)) == NULL)
+	firulais = malloc(sizeof(dog_t));
+	if (firulais == NULL)
 		return (NULL);
-	else
-	{
-		strcpy((new_dog->name), name);
-		new_dog->age = age;
-		strcpy((new_dog->owner), owner);
-		return (new_dog);
-	}
+
+	firulais->name = malloc(sizeof(name));
+	firulais->owner = malloc(sizeof(owner));
+	strcpy(firulais->name, name);
+	strcpy(firulais->owner, owner);
+
+	firulais->name = name;
+	firulais->age = age;
+	firulais->owner = owner;
+
+	return (firulais);
 }

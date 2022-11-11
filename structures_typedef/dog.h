@@ -26,7 +26,7 @@ typedef struct dog
  */
 int main(void)
 {
-	dog dog_t
+	dog dog_t;
 	return (0);
 }
 

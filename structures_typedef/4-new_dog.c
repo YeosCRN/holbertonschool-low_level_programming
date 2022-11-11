@@ -1,41 +1,50 @@
 #include "dog.h"
 /**
- * init_dog - funct
- * @d: pointer
- * @name: name
- * @age: age
- * @owner: owner
+ * new_dog - name to the pointer to the new dog
+ * @name:dog name
+ * @age:dog age
+ * @owner:dog owner
+ * Return: new_dog
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *firulais;
-	char *non, *own;
+	int namel, ownerl, n, o;
+	dog_t *newdog;
 
-	firulais = malloc(sizeof(dog_t));
-	if (firulais == NULL)
+	namel = strlen(name);
+	ownerl = strlen(owner);
+
+	newdog = malloc(sizeof(dog_t));
+
+	if (newdog == NULL)
 		return (NULL);
 
-	non = malloc(strlen(name + 1));
-	if (firulais->name == NULL)
+	newdog->name = malloc(namel + 1);
+
+	if (name == NULL)
 	{
-		free(non);
-		free(firulais);
+		free(newdog->name);
+		free(newdog);
 		return (NULL);
-		strcpy(non, name);
-	}
-	own = malloc(strlen(owner + 1));
-	if (own == NULL)
-	{
-		free(own);
-		free(non);
-		free(firulais);
-		return (NULL);
-		strcpy(own, owner);
 	}
 
-	firulais->name = non;
-	firulais->age = age;
-	firulais->owner = own;
+	for (n = 0; n < namel + 1; n++)
+		newdog->name[n] = name[n];
 
-	return (firulais);
+	newdog->owner = malloc(ownerl + 1);
+
+	if (owner == NULL)
+	{
+		free(newdog->owner);
+		free(newdog->name);
+		free(newdog);
+		return (NULL);
+	}
+
+	for (o = 0; o < ownerl + 1; o++)
+		newdog->owner[o] = owner[o];
+	newdog->age = age;
+
+	return (newdog);
 }

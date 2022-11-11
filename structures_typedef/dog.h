@@ -18,6 +18,18 @@ typedef struct dog
 	float age;
 	char *owner;
 } dog;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	dog dog_t
+	return (0);
+}
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 #endif

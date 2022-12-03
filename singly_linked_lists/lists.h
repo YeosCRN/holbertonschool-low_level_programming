@@ -8,7 +8,7 @@
 /**
  * struct list_s - singly linked list
  * @str: string
- * @length: length
+ * @len: length
  * @next: pointer
  */
 typedef struct list_s

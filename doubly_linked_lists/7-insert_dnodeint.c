@@ -1,24 +1,6 @@
 #include "lists.h"
 
 /**
- * dlistint_len - code
- * @h: pointer
- * Return: count
- */
-
-size_t dlistint_len(const dlistint_t *h)
-{
-	int count = 0;
-
-	while (h)
-	{
-		count++;
-		h = h->next;
-	}
-	return (count);
-}
-
-/**
  * insert_dnodeint_at_index - code
  * @h: pointer
  * @idx: var
@@ -28,44 +10,39 @@ size_t dlistint_len(const dlistint_t *h)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new, *temp;
-	size_t length;
-	unsigned int i = 0;
+	dlistint_t *tmp, *new_nod;
 
-	if (h == NULL)
+	new_nod = (dlistint_t *)malloc(sizeof(dlistint_t));
+	if (!new_nod)
 		return (NULL);
+	new_nod->n = n;
+	tmp = *h;
+	if (!tmp)
+	{
+		new_nod->prev = NULL;
+		new_nod->next = NULL;
+		*h = new_nod;
+		return (new_nod);
+	}
 	if (idx == 0)
-		return (add_dnodeint(h, n));
-
-	length = dlistint_len(*h);
-	if (idx == length - 1)
-		return (add_dnodeint_end(h, n));
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	{
+		new_nod->prev = NULL;
+		new_nod->next = tmp;
+		tmp->prev = new_nod;
+		*h = new_nod;
+		return (new_nod);
+	}
+	while (idx > 1 && tmp->next)
+	{
+		tmp = tmp->next;
+		idx -= 1;
+	}
+	if (idx > 1 && !tmp->next)
 		return (NULL);
-	new->n = n;
-	if (*h == NULL)
-	{
-		new->prev = NULL;
-		new->next = NULL;
-		*h = new;
-		return (new);
-	}
-	temp = *h;
-	while (temp)
-	{
-		if (i == idx)
-		{
-			new->next = temp;
-			new->prev = temp->prev;
-			temp->prev->next = new;
-			temp->prev = new;
-			return (new);
-		}
-		temp = temp->next;
-		i++;
-	}
-	free(new);
-	return (NULL);
+	new_nod->prev = tmp;
+	new_nod->next = tmp->next ? tmp->next : NULL;
+	if (tmp->next)
+		tmp->next->prev = new_nod;
+	tmp->next = tmp->next && idx > 1 ? NULL : new_nod;
+	return (new_nod);
 }

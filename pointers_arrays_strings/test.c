@@ -1,37 +1,19 @@
 #include "main.h"
 
 /**
- * _strstr - code
- * @haystack: pointer
- * @needle: pointer
- * Return: haystack after finding str
+ * print_chessboard - code
+ * @a: array
  */
-char *_strstr(char *haystack, char *needle)
+void print_diagsums(int *a, int size)
 {
-	int x, y;
+	int x, y, colunm;
 
-	x = 0;
-	while (haystack[x] != '\0')
+	for (x = 0; x < size; x++)
 	{
-		y = 0;
-		while (needle[y] != '\0')
+		for (y = 0; y < size; y += 2)
 		{
-			if (haystack[x] == needle[y] && haystack[x + 1] == needle[y + 1] && haystack[x + 2] == needle[y + 2])
-			{
-				return (haystack + x);
-			}
-			y++;
+			printf("%d", x + y);
 		}
-		x++;
+		printf("\n");
 	}
-	if (needle[y] == '\0')
-	{
-		return (haystack);
-	}
-	else if (needle[y + 1] == '\0')
-	{
-		return (NULL);
-	}
-
-	return (NULL);
 }
